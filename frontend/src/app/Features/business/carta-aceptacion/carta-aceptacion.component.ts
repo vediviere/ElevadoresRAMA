@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   templateUrl: './carta-aceptacion.component.html',
   styleUrl: './carta-aceptacion.component.css'
 })
-export default class CartaAceptacionComponent {
+export class CartaAceptacionComponent {
 
 }

@@ -29,7 +29,8 @@ export class LoginComponent {
     const loginCorrecto = this.authService.login(this.email, this.password);
 
     if (loginCorrecto) {
-      this.router.navigate(['/dashboard']);
+      // this.router.navigate(['/layout']);
+      this.router.navigate(['/layout/dashboard']);
       return;
     }
 

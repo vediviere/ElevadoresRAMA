@@ -10,6 +10,6 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.css'
 })
-export default class LayoutComponent {
+export class LayoutComponent {
 
 }
