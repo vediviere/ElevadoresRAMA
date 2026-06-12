@@ -10,7 +10,7 @@ export class AuthService {
   constructor(private router: Router) {}
 
   login(email: string, password: string): boolean {
-    if (email === 'admin@rama.com' && password === '123456') {
+    if (email === '123' && password === '123456') {
       localStorage.setItem(this.tokenKey, 'demo-token-rama');
       return true;
     }
