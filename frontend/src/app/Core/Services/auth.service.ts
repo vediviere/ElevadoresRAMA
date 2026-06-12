@@ -1,29 +1,28 @@
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
-  private readonly tokenKey = 'rama_demo_token';
-
-  constructor(private router: Router) {}
+  private readonly storageKey = 'rama-auth';
 
   login(email: string, password: string): boolean {
-    if (email === '123' && password === '123456') {
-      localStorage.setItem(this.tokenKey, 'demo-token-rama');
+    const correoValido = email.trim().toLowerCase() === 'admin@rama.com';
+    const passwordValido = password === '123456';
+
+    if (correoValido && passwordValido) {
+      localStorage.setItem(this.storageKey, 'true');
       return true;
     }
 
     return false;
   }
 
-  logout(): void {
-    localStorage.removeItem(this.tokenKey);
-    this.router.navigate(['/login']);
+  isLoggedIn(): boolean {
+    return localStorage.getItem(this.storageKey) === 'true';
   }
 
-  isLoggedIn(): boolean {
-    return !!localStorage.getItem(this.tokenKey);
+  logout(): void {
+    localStorage.removeItem(this.storageKey);
   }
 }
