@@ -1,17 +1,21 @@
 <div class="login-page">
+  <div class="page-particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
   <section class="login-shell">
-    <!-- ══════════════════════════════════════════
-         PANEL IZQUIERDO — imagen de elevador + logo
-         ══════════════════════════════════════════ -->
+    <div class="light-divider"></div>
+
     <div class="brand-panel">
       <div class="elevator-photo"></div>
       <div class="brand-overlay"></div>
 
       <div class="brand-content">
-        <!-- Logo completo (imagen real):
-             src="Assets/Img/LogoRAMACorrecto.png" -->
         <img
-          src="Assets/Img/LogoRAMACorrecto.png"
+          src="Assets/Img/LogoMejorado.png"
           alt="RAMA Elevadores"
           class="logo-image"
         />
@@ -22,15 +26,11 @@
       </div>
     </div>
 
-    <!-- ══════════════════════════════════════════
-         PANEL DERECHO — formulario
-         ══════════════════════════════════════════ -->
     <div class="form-panel">
       <div class="login-card">
-        <h1>Bienvenido de nuevo</h1>
+        <h1>BIENVENIDO</h1>
         <p class="subtitle">Por favor inicia sesión para continuar</p>
 
-        <!-- Email -->
         <div class="input-group" [class.has-error]="error">
           <span class="input-icon">
             <svg
@@ -47,6 +47,7 @@
               <path d="M2 7l10 7 10-7" />
             </svg>
           </span>
+
           <input
             type="email"
             placeholder="Correo electrónico"
@@ -56,7 +57,6 @@
           />
         </div>
 
-        <!-- Contraseña -->
         <div class="input-group" [class.has-error]="error">
           <span class="input-icon">
             <svg
@@ -73,6 +73,7 @@
               <path d="M7 11V7a5 5 0 0 1 10 0v4" />
             </svg>
           </span>
+
           <input
             [type]="showPassword ? 'text' : 'password'"
             placeholder="Contraseña"
@@ -80,6 +81,7 @@
             name="password"
             autocomplete="current-password"
           />
+
           <button
             class="eye-btn"
             type="button"
@@ -88,7 +90,6 @@
               showPassword ? 'Ocultar contraseña' : 'Mostrar contraseña'
             "
           >
-            <!-- Ojo abierto -->
             <svg
               *ngIf="!showPassword"
               width="20"
@@ -103,7 +104,7 @@
               <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z" />
               <circle cx="12" cy="12" r="3" />
             </svg>
-            <!-- Ojo cerrado -->
+
             <svg
               *ngIf="showPassword"
               width="20"
@@ -126,7 +127,6 @@
           </button>
         </div>
 
-        <!-- Opciones -->
         <div class="options">
           <label class="remember">
             <span
@@ -136,21 +136,20 @@
             ></span>
             Recordarme
           </label>
+
           <a href="#" class="forgot-link">¿Olvidaste tu contraseña?</a>
         </div>
 
-        <!-- Botón principal -->
         <button class="btn-login" type="button" (click)="ingresar()">
           Iniciar Sesión
         </button>
 
-        <!-- Error -->
         <div class="error-msg" *ngIf="error">{{ error }}</div>
 
-        <!-- Divisor social -->
-        <div class="divider"><span>O CONTINÚA CON</span></div>
+        <div class="divider">
+          <span>O CONTINÚA CON</span>
+        </div>
 
-        <!-- Botones sociales -->
         <div class="social-row">
           <button class="btn-social" type="button" aria-label="Google">
             <svg width="22" height="22" viewBox="0 0 24 24">
@@ -172,6 +171,7 @@
               />
             </svg>
           </button>
+
           <button class="btn-social" type="button" aria-label="GitHub">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
               <path
@@ -179,6 +179,7 @@
               />
             </svg>
           </button>
+
           <button class="btn-social" type="button" aria-label="Twitter / X">
             <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
               <path
@@ -188,7 +189,6 @@
           </button>
         </div>
 
-        <!-- Registro -->
         <p class="register-line">
           ¿No tienes una cuenta? <a href="#">Regístrate</a>
         </p>

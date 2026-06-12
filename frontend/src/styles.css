@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "SAA Series W01 F D";
+
+    src: url("/assets/fonts/c92bee710454487b5f63592ce3846b84.woff2") format("woff2"),
+         url("/assets/fonts/c92bee710454487b5f63592ce3846b84.woff") format("woff");
+
+    font-weight: normal;
+    font-style: normal;
+}
