@@ -7,7 +7,7 @@ export class AuthService {
   private readonly storageKey = 'rama-auth';
 
   login(email: string, password: string): boolean {
-    const correoValido = email.trim().toLowerCase() === 'admin@rama.com';
+    const correoValido = email.trim().toLowerCase() === '123';
     const passwordValido = password === '123456';
 
     if (correoValido && passwordValido) {
